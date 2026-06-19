@@ -33,7 +33,7 @@ Key design decisions are documented in the technical report under `docs/`.
 
 ---
 
-<!-- ## What Is Included
+## What Is Included
 
 ```
 MediflowDB/
@@ -69,13 +69,13 @@ MediflowDB/
     └── MediflowDB_Week_1.bak         -- sample database backup file
 ```
 
---- -->
+---
 
 ## How to Run
 
 **Requirements:** Microsoft SQL Server (any edition) with SQL Server Management Studio (SSMS).
 
-<!-- Run the scripts in the numbered order below. Each script depends on the objects created by the one before it.
+Run the scripts in the numbered order below. Each script depends on the objects created by the one before it.
 
 ```
 1. schema/01_create_database.sql
@@ -91,7 +91,7 @@ MediflowDB/
 11. queries/11_subqueries.sql
 12. queries/12_aggregate_queries.sql
 13. queries/13_system_procedures.sql
-``` -->
+```
 
 Open each file in SSMS, ensure you are connected to the correct instance, and press F5 to execute.
 
@@ -132,7 +132,7 @@ One user is assigned to each role: `sys_admin_mediflow`, `staff_hospital_01`, `s
 
 ---
 
-## Things to expand to in the future
+## Possible Extensions
 
 - **District-level proximity search** — the current `sp_FindNearbyPharmacies` procedure uses string matching on a combined address field. Splitting address into structured columns (street, postal code, district) would enable higher-precision queries.
 - **Patient registration pipeline** — an INSTEAD OF trigger on a registration view could automatically route incoming patient and appointment data to the correct tables without requiring the application layer to manage ID lookups.
@@ -152,5 +152,3 @@ The full technical report is available in `docs/Mediflow_Report.docx`. It covers
 INEZA Ndahirwa Sosthene  
 Databases course — Vizja University, Warsaw  
 2025 / 2026
-
-Now I can rest!😮‍💨
