@@ -162,3 +162,12 @@ CREATE TABLE PharmacySales (
     CONSTRAINT CHK_Sales_Paid CHECK (totalPaid >= 0.00) -- There is no debt.
 );
 GO
+
+CREATE TABLE DoctorHospital (
+    doctorId   INT NOT NULL,
+    hospitalId INT NOT NULL,
+    CONSTRAINT PK_DoctorHospital PRIMARY KEY (doctorId, hospitalId),
+    CONSTRAINT FK_DoctorHospital_Doctors   FOREIGN KEY (doctorId)   REFERENCES Doctors(doctorId),
+    CONSTRAINT FK_DoctorHospital_Hospitals FOREIGN KEY (hospitalId) REFERENCES Hospitals(hospitalId)
+);
+GO
