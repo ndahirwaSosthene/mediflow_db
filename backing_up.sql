@@ -1,11 +1,3 @@
--- ==========================================================
--- PHASE 4: DATABASE ADMINISTRATION & AUTOMATION (Step 7)
--- SYSTEM: Mediflow Medical Ecosystem
--- OBJECT: Administrative Rolling Backup Engine (Pure T-SQL)
--- ==========================================================
-USE MediflowDB;
-GO
-
 -- 1. Create a persistent configuration table to track backup cycles
 IF OBJECT_ID('BackupRotation', 'U') IS NOT NULL
     DROP TABLE BackupRotation;
